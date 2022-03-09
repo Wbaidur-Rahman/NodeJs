@@ -11,19 +11,19 @@ leaderRouter.route('/')
 
 leaderRouter.route('/:leaderId')
 .get((req,res) => {
-	res.send('Get request on Leader Id = ${req.params.leaderId}')
+	res.send(`Get request on Leader Id = ${req.params.leaderId}`)
 })
 
 .post((req,res) => {
-	res.send('Post request on Leader Id = ${req.params.leaderId}')
+	res.send(`Post request on Leader Id = ${req.params.leaderId}`)
 })
 
 .put((req,res) => {
-	res.send('Put request on Leader Id = ${req.params.leaderId}')
+	res.send(`Put request on Leader Id = ${req.params.leaderId}`)
 })
 
 .delete((req,res) => {
-	res.send('Delete request on Leader Id = ${req.params.leaderId}')
+	res.send(`Delete request on Leader Id = ${req.params.leaderId}`)
 })
 
 .all((req, res) => {
