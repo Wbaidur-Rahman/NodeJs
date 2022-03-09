@@ -9,7 +9,7 @@ app.use('/dishes',require('./routes/dishRouter'))
 app.use('/promotions',require('./routes/promoRouter'))
 app.use('/leaders',require('./routes/leaderRouter'))
 app.all('/', (req, res) => {
-  res.send('Index Page')
+  res.send('This is an express server!')
 })
 app.listen(PORT, () => {
   console.log(`Server running on PORT ${PORT}`)
