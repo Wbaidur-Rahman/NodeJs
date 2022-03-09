@@ -6,11 +6,11 @@ const dishRouter = express.Router();
 dishRouter.use(bodyParser.json());
  
 dishRouter.route('/')
-.all((req,res,next) => {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain');
-    next();
+.all((req,res) => {
+   res.send(`${req.method} Request on Dish Router`);
 })
+
+dishRouter.route('/:dishId')
 .get((req,res,next) => {
     res.end('Will send all the dishes to you!');
 })
@@ -23,6 +23,10 @@ dishRouter.route('/')
 })
 .delete((req, res, next) => {
     res.end('Deleting all dishes');
-});
+})
+
+.all((req,res) =>{
+	res.send("Invalid request");
+})
  
 module.exports = dishRouter;
